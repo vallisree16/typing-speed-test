@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Typing Speed Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- HOME PAGE -->
+
+<div id="startPage">
+
+
+<h1>Typing Speed Test 🚀</h1>
+
+<p>Improve your typing speed and accuracy</p>
+
+
+<input id="username" placeholder="Enter your name">
+
+
+<h3>Select Difficulty</h3>
+
+
+<div class="levels">
+
+<button onclick="startLevel('easy')">
+Beginner
+</button>
+
+
+<button onclick="startLevel('medium')">
+Intermediate
+</button>
+
+
+<button onclick="startLevel('hard')">
+Hard
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- TEST PAGE -->
+
+
+<div id="testPage" class="hide">
+
+
+<h1>Hello <span id="user"></span> 👋</h1>
+
+
+<div class="box">
+
+<p id="sentence"></p>
+
+</div>
+
+
+
+<textarea 
+id="inputText"
+placeholder="Start typing here..."
+oninput="checkTyping()">
+</textarea>
+
+<div id="celebrate">
+🎉 Great Job! 🎉
+</div>
+
+<button id="nextBtn" onclick="nextSentence()">
+Next Sentence →
+</button>
+
+
+
+
+<div class="stats">
+
+
+<div class="stat-card">
+
+<h3>⏱ Time</h3>
+
+<span id="time">60</span>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<h3>⚡ WPM</h3>
+
+<span id="wpm">0</span>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<h3>🎯 Accuracy</h3>
+
+<span id="accuracy">100%</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- RESULT PAGE -->
+
+
+<div id="resultPage" class="hide">
+
+
+<h1>Test Completed 🎉</h1>
+
+
+<h2 id="resultName"></h2>
+
+
+<p>
+Speed :
+<b>
+<span id="finalWpm"></span> WPM
+</b>
+</p>
+
+
+<p>
+Accuracy :
+<b>
+<span id="finalAccuracy"></span>
+</b>
+</p>
+
+
+
+<button onclick="location.reload()">
+
+Try Again
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
